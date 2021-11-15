@@ -1,4 +1,4 @@
-header {
+.page-header {
     height: 400px;
     margin-top: 120px;
     width: 100%;
@@ -8,4 +8,5 @@ header {
     justify-content: center;
     background-color: orange;
     background-image: url(http://www.transparenttextures.com/patterns/45-degree-fabric-light.png);
+
 }
