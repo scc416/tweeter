@@ -27,3 +27,7 @@ textarea {
     resize: none;
     font-size: 0.9em;
 }
+
+.red-text {
+    color: red;
+}
