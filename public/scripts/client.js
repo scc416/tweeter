@@ -1,7 +1,7 @@
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ * Reminder: Use (and do all your DOM work in) jQuery"s document ready function
  */
 
 $(document).ready(() => {
@@ -42,7 +42,7 @@ $(document).ready(() => {
   };
 
   const renderTweets = function (tweets) {
-    const $tweetContainer = $('#tweets-container');
+    const $tweetContainer = $("#tweets-container");
     for (const tweetInfo of tweets) {
       const $tweet = createTweetElement(tweetInfo);
       $tweetContainer.prepend($tweet);
@@ -75,6 +75,15 @@ $(document).ready(() => {
       "created_at": 1461113959088
     }
   ];
+
+  const $form = $("#form");
+  $form.on("submit", (event) => {
+    event.preventDefault();
+
+    const data = $form.serialize();
+    const url = "/tweets";
+    jQuery.post(url, data);
+  });
 
   renderTweets(data);
 });
