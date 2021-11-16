@@ -77,12 +77,21 @@ $(document).ready(() => {
   ];
 
   const $form = $("#form");
+  const $tweetText = $("#tweet-text");
+  const $count = $("#counter")
+
   $form.on("submit", (event) => {
     event.preventDefault();
 
     const data = $form.serialize();
     const url = "/tweets";
+
     jQuery.post(url, data);
+    $tweetText.val("");
+
+    $count.text("140");
+    $count.toggleClass("red-text", false);
+    
   });
 
   renderTweets(data);
