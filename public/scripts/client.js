@@ -8,6 +8,7 @@ const createTweetElement = (tweetObj) => {
     const { user, content, created_at } = tweetObj;
     const { name, avatars, handle } = user;
     const { text } = content;
+    const timePass = timeago.format(created_at);
 
     const $tweet = $(`
     <article class="tweet">
@@ -25,7 +26,7 @@ const createTweetElement = (tweetObj) => {
     </div>
     <footer>
       <div>
-        ${created_at}
+        ${timePass}
       </div>
       <div>
         <span class="fas fa-flag"></span>
