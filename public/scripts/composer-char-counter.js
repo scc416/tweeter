@@ -1,8 +1,8 @@
 $(document).ready( () => {
-    const tweetText = $("#tweet-text");
+    const $tweetText = $("#tweet-text");
     
-    tweetText.on("input", () => {
-        const val = tweetText.val();
+    $tweetText.on("input", () => {
+        const val = $tweetText.val();
         const numOfChar = val.length;
         const charLeft = 140 - numOfChar;
         $("#counter").text(charLeft);
