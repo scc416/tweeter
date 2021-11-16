@@ -1,13 +1,14 @@
-$(document).ready( () => {
-    const $tweetText = $("#tweet-text");
-    
-    $tweetText.on("input", () => {
-        const val = $tweetText.val();
-        const numOfChar = val.length;
-        const charLeft = 140 - numOfChar;
-        $("#counter").text(charLeft);
+$(document).ready(() => {
+  const $tweetText = $("#tweet-text");
+  const $count = $("#counter");
 
-        const tooManyChar = charLeft < 0;
-        $("#counter").toggleClass( "red-text", tooManyChar);  
-    });
+  $tweetText.on("input", () => {
+    const val = $tweetText.val();
+    const numOfChar = val.length;
+    const charLeft = 140 - numOfChar;
+    $count.text(charLeft);
+
+    const tooManyChar = charLeft < 0;
+    $count.toggleClass("red-text", tooManyChar);
+  });
 });

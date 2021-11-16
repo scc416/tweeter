@@ -47,7 +47,7 @@ $(document).ready(() => {
       const $tweet = createTweetElement(tweetInfo);
       $tweetContainer.prepend($tweet);
     }
-  }
+  };
 
   // Fake data taken from initial-tweets.json
   const data = [
@@ -74,7 +74,7 @@ $(document).ready(() => {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
   renderTweets(data);
 });
