@@ -63,6 +63,15 @@ $(document).ready(() => {
   $form.on("submit", (event) => {
     event.preventDefault();
 
+    const val = $tweetText.val();
+    const numOfChar = val.length;
+
+    const emptyTweet = numOfChar === 0;
+    if (emptyTweet) return alert("You cannot submit empty tweet.");
+
+    const tooLongTweet = numOfChar > 140;
+    if (tooLongTweet) return alert("You cannot submit tweet of more than 140 characters.");
+
     const data = $form.serialize();
     const url = "/tweets";
 
@@ -70,6 +79,7 @@ $(document).ready(() => {
     .done(() => {
       loadTweets();
     });
+
     $tweetText.val("");
     $count.text("140");
     $count.toggleClass("red-text", false);
