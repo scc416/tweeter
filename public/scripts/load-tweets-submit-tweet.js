@@ -6,6 +6,7 @@ $(document).ready(() => {
   const $count = $("#counter");
   const $tweetContainer = $("#tweets-container");
 
+  // display the word count and update color when there is input into the text area of the form
   $tweetText.on("input", () => {
     const val = $tweetText.val();
     const numOfChar = val.length;
@@ -16,6 +17,7 @@ $(document).ready(() => {
     $count.toggleClass("red-text", tooManyChar);
   });
 
+  // helper function to display the error message with an icon
   const displayErrorMsg = (errorMsg) => {
 
     if (!errorMsg) return $error.slideUp();
@@ -28,11 +30,16 @@ $(document).ready(() => {
     $error.html(errorMsgWithIcon).slideDown("slow");
   };
 
+  // show whether to display error msg or submit the tweet when submit button is clicked
   $form.on("submit", (event) => {
     event.preventDefault();
+
+    //hide the error message first, no matter if there is any errors
     displayErrorMsg(null);
 
     const val = $tweetText.val();
+
+    // character count of the value in the text area
     const numOfChar = val.length;
 
     const emptyTweet = numOfChar === 0;
@@ -41,31 +48,40 @@ $(document).ready(() => {
       return displayErrorMsg(errorMsg);
     }
 
-    const tooLongTweet = numOfChar > 140;
-    if (tooLongTweet) {
+    const tweetToLong = numOfChar > 140;
+    if (tweetToLong) {
       const errorMsg = "You cannot submit tweet of more than 140 characters.";
       return displayErrorMsg(errorMsg);
     }
 
+    // convert the input into query string for the server
+    // server is configured to receive form data formatted as a query string
     const data = $form.serialize();
     const url = "/tweets";
 
+    // use jQuery library to submit a POST request
     jQuery.post(url, data)
     .done(() => {
+      // load the tweets when the new tweet is submitted
       loadTweets();
     });
 
+    // reset the text area
     $tweetText.val("");
+
+    // reset the count (and class)
     $count.text("140");
     $count.toggleClass("red-text", false);
   });
 
+  // helper function to prevent XSS
   const escape = (str) => {
     const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
+  // helper function to make tweet element
   const createTweetElement = (tweet) => {
     const { user, content, created_at } = tweet;
     const { name, avatars, handle } = user;
@@ -101,6 +117,8 @@ $(document).ready(() => {
     return $tweet;
   };
 
+  // helper function to loop an array of tweet information to make element
+  // then add the element right after the start tag of the container
   const renderTweets = function (tweets) {
     for (const tweetInfo of tweets) {
       const $tweet = createTweetElement(tweetInfo);
@@ -108,6 +126,7 @@ $(document).ready(() => {
     }
   };
 
+  // get all the tweet information from the database and use the result to load the tweets
   const loadTweets = () => {
     $.ajax("/tweets", { method: 'GET' })
     .then((tweets) => {
@@ -115,5 +134,6 @@ $(document).ready(() => {
     });
   };
 
+  // load tweet when the page is first loaded
   loadTweets();
 });
