@@ -49,32 +49,12 @@ $(document).ready(() => {
     }
   };
 
-  // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  const loadTweets = () => {
+    $.ajax("/tweets", { method: 'GET' })
+    .then((tweets) => {
+      renderTweets(tweets);
+    });
+  };
 
   const $form = $("#form");
   const $tweetText = $("#tweet-text");
@@ -86,13 +66,14 @@ $(document).ready(() => {
     const data = $form.serialize();
     const url = "/tweets";
 
-    jQuery.post(url, data);
+    jQuery.post(url, data)
+    .done(() => {
+      loadTweets();
+    });
     $tweetText.val("");
-
     $count.text("140");
     $count.toggleClass("red-text", false);
-    
   });
 
-  renderTweets(data);
+  loadTweets();
 });
