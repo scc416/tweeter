@@ -4,36 +4,13 @@ nav {
     color: #FFFFFF;
     height: 120px;
     width: 100vw;
-    padding: 0 0.5em 0 1.5em;
+    padding: 0 1.5em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    text-align: center;
     top: 0px;
     left: 0px;
 }
 
-nav span.logo {
+nav span.logo {  
     font-family: Bungee;
-}
-
-#make-new-tweet {
-    font-size: 0.7em;
-    padding: 1em;
-}
-
-#make-new-tweet:hover {
-    cursor: pointer;
-}
-
-.strong {
-    font-weight: 600;
-}
-
-.light {
-    font-weight: 100;
-}
-
-nav i.fas {
-    color: #EF4126;
 }

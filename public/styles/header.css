@@ -1,6 +1,5 @@
 .page-header {
     height: 500px;
-    padding-top: 110px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -9,3 +8,28 @@
     background-color: #D59B36;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
+
+header #make-new-tweet {
+    align-self: flex-end;
+    font-size: 0.75em;
+    text-align: center;
+    padding-right: 1em;
+    z-index: 1;
+}
+
+header #make-new-tweet:hover {
+    cursor: pointer;
+}
+
+#make-new-tweet i.fas {
+    color: #EF4126;
+}
+
+.strong {
+    font-weight: 600;
+}
+
+.light {
+    font-weight: 100;
+}
+
