@@ -29,6 +29,10 @@ body {
    width: 90%;
  }
 
+ #scroll-to-top {
+  display: none;
+ }
+
 .circle-container {
   background-color: red;
   height: 2.9em;
