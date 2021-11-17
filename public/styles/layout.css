@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -21,17 +23,17 @@ body {
   font-family: "Source Sans Pro";
 }
 
- main {
-   display: flex;
-   margin: 0 5%;
-   flex-direction: column;
-   justify-content:  center;
-   width: 90%;
- }
+main {
+  display: flex;
+  margin: 0 5%;
+  flex-direction: column;
+  justify-content: center;
+  width: 90%;
+}
 
- #scroll-to-top {
+#scroll-to-top {
   display: none;
- }
+}
 
 .circle-container {
   background-color: red;
