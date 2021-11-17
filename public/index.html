@@ -22,8 +22,9 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/toggle-form.js"></script>
-  <script type="text/javascript" src="/scripts/form.js"></script>
-  <script type="text/javascript" src="/scripts/load-tweets.js"></script>
+  <script type="text/javascript" src="/scripts/load-tweets-submit-tweet.js"></script>
+  <script type="text/javascript" src="/scripts/scroll-to-top.js"></script>
+
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     type="text/css">
@@ -40,7 +41,7 @@
   <!-- Top nav bar (fixed) -->
   <nav>
     <span class="logo">tweeter</span>
-    <div id="make-new-tweet">
+    <div id="to-new-tweet">
       <div>
         <span class="strong">Write</span><span class="light"> a new tweet</span>
       </div>
@@ -60,9 +61,6 @@
       <h2>Siu Chan</h2>
     </div>
   </header>
-  <div class="circle-container">
-    <span id="test" class="fas fa-angle-double-up"></span>
-  </div>
 
   <main class="container">
 
@@ -80,7 +78,9 @@
 
     <div id="tweets-container"></div>
 
-    
+    <div class="circle-container">
+      <span id="scroll-to-top" class="fas fa-angle-double-up"></span>
+    </div>
 
   </main>
 

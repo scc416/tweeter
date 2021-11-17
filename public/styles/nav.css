@@ -16,16 +16,16 @@ nav span.logo {
     font-family: Bungee;
 }
 
-nav #make-new-tweet {
+nav #to-new-tweet {
     font-size: 0.75em;
     text-align: center;
 }
 
-nav #make-new-tweet:hover {
+nav #to-new-tweet:hover {
     cursor: pointer;
 }
 
-#make-new-tweet i.fas {
+#to-new-tweet i.fas {
     color: #EF4126;
 }
 
