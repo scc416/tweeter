@@ -66,17 +66,38 @@ $(document).ready(() => {
   const $tweetText = $("#tweet-text");
   const $count = $("#counter")
 
+  const $error = $("#error");
+
+  const displayErrorMsg = (errorMsg) => {
+    if (!errorMsg) return $error.text("").slideUp();
+
+    const errorMsgWithIcon = (`
+      <i class="fas fa-exclamation-circle"></i>
+      ${errorMsg}
+    `);
+
+    $error.html(errorMsgWithIcon);
+    $error.slideDown("slow");
+  };
+
   $form.on("submit", (event) => {
     event.preventDefault();
+    displayErrorMsg(null);
 
     const val = $tweetText.val();
     const numOfChar = val.length;
 
     const emptyTweet = numOfChar === 0;
-    if (emptyTweet) return alert("You cannot submit empty tweet.");
+    if (emptyTweet) {
+      const errorMsg = "You cannot submit empty tweet.";
+      return displayErrorMsg(errorMsg);
+    }
 
     const tooLongTweet = numOfChar > 140;
-    if (tooLongTweet) return alert("You cannot submit tweet of more than 140 characters.");
+    if (tooLongTweet) {
+      const errorMsg = "You cannot submit tweet of more than 140 characters.";
+      return displayErrorMsg(errorMsg);
+    }
 
     const data = $form.serialize();
     const url = "/tweets";

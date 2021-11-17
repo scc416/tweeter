@@ -9,6 +9,7 @@ form div {
     display: flex;
     justify-content: space-between;
     font-size: 0.9em;
+    padding-top: 0.5em;
 }
 
 form button {
@@ -30,4 +31,10 @@ textarea {
 
 .red-text {
     color: red;
+}
+
+#error {
+    color: red;
+    font-weight: 400;
+    font-size: 0.8em;
 }
