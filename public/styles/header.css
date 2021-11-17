@@ -1,11 +1,11 @@
 .page-header {
     height: 500px;
-    padding-top: 100px;
+    padding-top: 110px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #c89632;
+    background-color: #D59B36;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }

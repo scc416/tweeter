@@ -6,6 +6,13 @@
 
 $(document).ready(() => {
 
+  const $makeNewTweetButton = $("#make-new-tweet");
+  const $makeNewTweet = $("#new-tweet");
+  const $form = $("#form");
+  const $count = $("#counter")
+  const $error = $("#error");
+  const $tweetText = $("#tweet-text");
+
   const escape = (str) => {
     const div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -62,22 +69,18 @@ $(document).ready(() => {
     });
   };
 
-  const $form = $("#form");
-  const $tweetText = $("#tweet-text");
-  const $count = $("#counter")
 
-  const $error = $("#error");
 
   const displayErrorMsg = (errorMsg) => {
-    if (!errorMsg) return $error.text("").slideUp();
+
+    if (!errorMsg) return $error.slideUp();
 
     const errorMsgWithIcon = (`
       <i class="fas fa-exclamation-circle"></i>
       ${errorMsg}
     `);
 
-    $error.html(errorMsgWithIcon);
-    $error.slideDown("slow");
+    $error.html(errorMsgWithIcon).slideDown("slow");
   };
 
   $form.on("submit", (event) => {
@@ -110,6 +113,19 @@ $(document).ready(() => {
     $tweetText.val("");
     $count.text("140");
     $count.toggleClass("red-text", false);
+  });
+
+
+
+  $makeNewTweetButton.on("click", () => {
+    const formIsDisplayed = !$makeNewTweet.is(":hidden");
+
+    if (formIsDisplayed) return $makeNewTweet.slideUp(300);
+    if (!formIsDisplayed) {
+      $makeNewTweet.slideDown(600, () => {
+        $tweetText.focus();
+      });
+    } 
   });
 
   loadTweets();
