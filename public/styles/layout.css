@@ -30,3 +30,32 @@ main {
   justify-content: center;
   width: 90%;
 }
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    width: 30%;
+    float: left;
+    margin: 1em 3.5%;
+    padding: 1em 0 0;
+    height: auto;
+  }
+
+  .page-header img {
+    height: 200px;
+  }
+
+  main {
+    width: 52%;
+    margin: 0 3%;
+    float: right;
+  }
+
+  nav {
+    background-color: #43579c;
+  }
+
+  .page {
+    margin-top: 150px;
+  }
+}

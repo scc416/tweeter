@@ -18,12 +18,12 @@
     />
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet-form.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
     <link rel="stylesheet" href="/styles/scroll-to-top.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -52,7 +52,6 @@
   </head>
 
   <body>
-    <!-- Top nav bar (fixed) -->
     <nav>
       <span class="logo">tweeter</span>
       <div id="to-new-tweet">
@@ -65,6 +64,8 @@
         </div>
       </div>
     </nav>
+    
+    <div class="page">
 
     <header class="page-header">
       <div>
@@ -75,7 +76,7 @@
       </div>
     </header>
 
-    <main class="container">
+    <main>
       <section id="new-tweet">
         <form id="form">
           <label for="tweet-text">What are you humming about?</label>
@@ -95,6 +96,7 @@
           <span class="fas fa-angle-double-up"></span>
         </div>
       </div>
+    </div>
     </main>
   </body>
 </html>
