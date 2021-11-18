@@ -43,23 +43,23 @@ $(document).ready(() => {
     // it is a promise, so that the new error message is not displayed until the previous error (if there is any) is slided up and clear
     clearErrorMsg()
       .then(() => {
-      const val = $tweetText.val();
+        const val = $tweetText.val();
 
-      // character count of the value in the text area
-      const numOfChar = val.length;
+        // character count of the value in the text area
+        const numOfChar = val.length;
 
-      const emptyTweet = numOfChar === 0;
-      
-      if (emptyTweet) {
-        const errorMsg = "You cannot submit empty tweet.";
-        displayErrorMsg(errorMsg);
-      } 
-      
-      const tweetToLong = numOfChar > 140;
-      if (tweetToLong) {
-        const errorMsg = "You cannot submit tweet of more than 140 characters.";
-        return displayErrorMsg(errorMsg);
-      }
+        const emptyTweet = numOfChar === 0;
+        
+        if (emptyTweet) {
+          const errorMsg = "You cannot submit empty tweet.";
+          displayErrorMsg(errorMsg);
+        }
+        
+        const tweetToLong = numOfChar > 140;
+        if (tweetToLong) {
+          const errorMsg = "You cannot submit tweet of more than 140 characters.";
+          return displayErrorMsg(errorMsg);
+        }
 
         // convert the input into query string for the server
         // server is configured to receive form data formatted as a query string
@@ -78,7 +78,7 @@ $(document).ready(() => {
         // reset the count (and class)
         $count.text("140");
         $count.toggleClass("red-text", false);
-    });
+      });
   });
 
   // helper function to prevent XSS
@@ -126,7 +126,7 @@ $(document).ready(() => {
 
   // helper function to loop an array of tweet information to make element
   // then add the element right after the start tag of the container
-  const renderTweets = function (tweets) {
+  const renderTweets = (tweets) => {
     for (const tweetInfo of tweets) {
       const $tweet = createTweetElement(tweetInfo);
       $tweetContainer.prepend($tweet);
