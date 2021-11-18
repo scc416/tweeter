@@ -18,7 +18,7 @@ $(document).ready(() => {
 
   // function that return promise to slide up and empty the error message
   const clearErrorMsg = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       $error.slideUp(() => {
         $error.text("");
         resolve();
@@ -52,7 +52,7 @@ $(document).ready(() => {
         
         if (emptyTweet) {
           const errorMsg = "You cannot submit empty tweet.";
-          displayErrorMsg(errorMsg);
+          return displayErrorMsg(errorMsg);
         }
         
         const tweetToLong = numOfChar > 140;
