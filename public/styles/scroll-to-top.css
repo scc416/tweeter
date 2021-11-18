@@ -2,14 +2,13 @@
   display: none;
 }
 #scroll-to-top .circle-container {
+  display: flex;
+  align-items: center;
   background-color: red;
   height: 2.9em;
   width: 2.9em;
   border-radius: 50%;
-  text-align: center;
-  display: flex;
   justify-content: center;
-  align-items: center;
   position: fixed;
   bottom: 0.5em;
   right: 0.5em;

@@ -1,15 +1,16 @@
+@use "mixins";
 @use "variables";
 
 .page-header {
+  @include mixins.center-align;
+
   height: 500px;
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   background-color: variables.$header-bg-colour;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   padding: 120px 0 0;
-  
+
   img {
     height: 200px;
   }

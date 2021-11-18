@@ -1,17 +1,17 @@
+@use "mixins";
 @use "variables";
 
 #scroll-to-top {
   display: none;
 
   .circle-container {
+    @include mixins.center-align;
+
     background-color: variables.$circle-button-colour;
     height: 2.9em;
     width: 2.9em;
     border-radius: 50%;
-    text-align: center;
-    display: flex;
     justify-content: center;
-    align-items: center;
     position: fixed;
     bottom: 0.5em;
     right: 0.5em;

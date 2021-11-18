@@ -1,14 +1,14 @@
 article.tweet {
   display: flex;
   flex-direction: column;
-  border: 0.2em solid #50504B;
+  border: 0.2em solid #50504b;
   padding: 0.4em;
   margin: 1em 0.5em;
 }
 article.tweet header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5em;
 }
 article.tweet header img {
@@ -22,12 +22,12 @@ article.tweet header div.name {
   font-weight: 200;
 }
 article.tweet header div.id {
-  color: #C8C8E1;
+  color: #c8c8e1;
   font-weight: 400;
 }
 article.tweet div.content {
   padding: 1.2em 0.8em;
-  border-bottom: #50504B 0.2em solid;
+  border-bottom: #50504b 0.2em solid;
 }
 article.tweet footer {
   font-size: 0.6em;
@@ -40,9 +40,9 @@ article.tweet footer span.fas {
   padding: 0.1em;
 }
 article.tweet footer span.fas:hover {
-  color: #BE9637;
+  color: #be9637;
 }
 
 article.tweet:hover {
-  box-shadow: 0.3em 0.3em #BEBED2;
+  box-shadow: 0.3em 0.3em #bebed2;
 }
