@@ -3,10 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+@use 'variables';
+
 html {
   box-sizing: border-box;
 }
-
 *,
 *:before,
 *:after {
@@ -16,6 +18,7 @@ html {
 /*
  * Global layout stuff
  */
+
 body {
   color: #545149;
   background-color: #f4f1ec;
@@ -40,6 +43,7 @@ main {
     padding: 1em 0 0;
     height: auto;
   }
+
 
   main {
     width: 52%;

@@ -1,40 +1,39 @@
 nav {
-    position: fixed;
-    background-color: transparent;
-    color: #FFFFFF;
-    height: 75px;
-    width: 100vw;
-    padding: 0 1.5em;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0px;
-    left: 0px;
+  position: fixed;
+  background-color: transparent;
+  color: #FFFFFF;
+  height: 75px;
+  width: 100vw;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0px;
+  left: 0px;
 }
 
-nav span.logo {  
-    font-family: Bungee;
-    font-size: 1.2em;
+nav span.logo {
+  font-family: Bungee;
+  font-size: 1.2em;
 }
 
 nav #to-new-tweet {
-    font-size: 0.75em;
-    text-align: center;
+  font-size: 0.75em;
+  text-align: center;
 }
 
 nav #to-new-tweet:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #to-new-tweet i.fas {
-    color: #EF4126;
+  color: #EF4126;
 }
 
 .strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .light {
-    font-weight: 100;
+  font-weight: 100;
 }
-
