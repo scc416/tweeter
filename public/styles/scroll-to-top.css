@@ -1,8 +1,7 @@
 #scroll-to-top {
   display: none;
 }
-
-.circle-container {
+#scroll-to-top .circle-container {
   background-color: red;
   height: 2.9em;
   width: 2.9em;
@@ -15,14 +14,12 @@
   bottom: 0.5em;
   right: 0.5em;
 }
-
-.circle-container:hover {
-  cursor: pointer;
-}
-
-div.circle-container .fa-angle-double-up {
+#scroll-to-top .circle-container .fa-angle-double-up {
   color: #ffffff;
   font-size: 1.2em;
   border-radius: 50%;
   text-align: center;
+}
+#scroll-to-top .circle-container:hover {
+  cursor: pointer;
 }

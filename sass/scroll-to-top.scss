@@ -2,29 +2,29 @@
 
 #scroll-to-top {
   display: none;
-}
 
-.circle-container {
-  background-color: variables.$circle-button-colour;
-  height: 2.9em;
-  width: 2.9em;
-  border-radius: 50%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0.5em;
-  right: 0.5em;
-}
+  .circle-container {
+    background-color: variables.$circle-button-colour;
+    height: 2.9em;
+    width: 2.9em;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0.5em;
+    right: 0.5em;
 
-.circle-container:hover {
-  cursor: pointer;
-}
+    .fa-angle-double-up {
+      color: variables.$inverted-text-colour;
+      font-size: 1.2em;
+      border-radius: 50%;
+      text-align: center;
+    }
+  }
 
-div.circle-container .fa-angle-double-up {
-  color: variables.$inverted-text-colour;
-  font-size: 1.2em;
-  border-radius: 50%;
-  text-align: center;
+  .circle-container:hover {
+    cursor: pointer;
+  }
 }
