@@ -90,10 +90,10 @@ $(document).ready(() => {
 
   // helper function to make tweet element
   const createTweetElement = (tweet) => {
-    const { user, content, created_at } = tweet;
+    const { user, content, createdAt } = tweet;
     const { name, avatars, handle } = user;
     const { text } = content;
-    const timePass = timeago.format(created_at);
+    const timePass = timeago.format(createdAt);
 
     const $tweet = $(`
     <article class="tweet">
