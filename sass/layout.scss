@@ -4,7 +4,7 @@
  * Do not modify these two selectors, please
  */
 
-@use 'variables';
+@use "variables";
 
 html {
   box-sizing: border-box;
@@ -20,10 +20,10 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: variables.$text-colour;
+  background-color: variables.$bg-colour;
   font-size: 24px;
-  font-family: "Source Sans Pro";
+  font-family: variables.$content-font;
 }
 
 main {
@@ -44,7 +44,6 @@ main {
     height: auto;
   }
 
-
   main {
     width: 52%;
     margin: 0 3%;
@@ -52,7 +51,7 @@ main {
   }
 
   nav {
-    background-color: #43579c;
+    background-color: variables.$nav-colour-screen;
   }
 
   .page {

@@ -3,13 +3,13 @@
 article.tweet {
     display: flex;
     flex-direction: column;
-    border: #50504B 0.2em solid;
+    border: 0.2em solid variables.$border-colour;
     padding: 0.4em;
     margin: 1em 0.5em;
 }
 
 article.tweet:hover {
-    box-shadow: 0.3em 0.3em #BEBED2;
+    box-shadow: 0.3em 0.3em variables.$tweet-shadow-colour;
 }
 
 article.tweet header {
@@ -32,13 +32,13 @@ article.tweet header div.name {
 }
 
 article.tweet header div.id {
-    color: #C8C8E1;
+    color: variables.$tweet-id-colour;
     font-weight: 400;
 }
 
 article.tweet div.content {
     padding: 1.2em 0.8em;
-    border-bottom: #50504B 0.2em solid;
+    border-bottom: 0.2em solid variables.$border-colour;
 }
 
 article.tweet footer {
@@ -54,5 +54,5 @@ article.tweet span.fas {
 }
 
 article.tweet span.fas:hover {
-    color: #BE9637;
+    color: variables.$tweet-icons-colour;
 }

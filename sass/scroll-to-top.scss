@@ -1,11 +1,11 @@
-@use 'variables';
+@use "variables";
 
 #scroll-to-top {
   display: none;
 }
 
 .circle-container {
-  background-color: red;
+  background-color: variables.$circle-button-colour;
   height: 2.9em;
   width: 2.9em;
   border-radius: 50%;
@@ -23,7 +23,7 @@
 }
 
 div.circle-container .fa-angle-double-up {
-  color: white;
+  color: variables.$inverted-text-colour;
   font-size: 1.2em;
   border-radius: 50%;
   text-align: center;

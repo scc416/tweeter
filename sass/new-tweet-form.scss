@@ -1,46 +1,46 @@
-@use 'variables';
+@use "variables";
 
 #new-tweet {
-    display: none;
+  display: none;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
 
 form div {
-    font-family: Bungee;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9em;
-    padding-top: 0.5em;
+  font-family: variables.$title-font;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9em;
+  padding-top: 0.5em;
 }
 
 form button {
-    background-color: #4056A1;
-    color: #FFFFFF;
-    border: none;
-    padding: 0.1em 0.5em;
+  background-color: variables.$submit-button-colour;
+  color: variables.$inverted-text-colour;
+  border: none;
+  padding: 0.1em 0.5em;
 }
 
 textarea {
-    border: none;
-    background-color: transparent;
-    border-bottom: black 0.2em solid;
-    margin-bottom: 0.6em;
-    outline: none;
-    resize: none;
-    font-size: 0.9em;
+  border: none;
+  background-color: variables.$textarea-colour;
+  border-bottom: 0.2em solid variables.$border-colour;
+  margin-bottom: 0.6em;
+  outline: none;
+  resize: none;
+  font-size: 0.9em;
 }
 
 .red-text {
-    color: red;
+  color: variables.$error-text-colour;
 }
 
 #error {
-    color: red;
-    font-weight: 400;
-    font-size: 0.8em;
+  color: variables.$error-text-colour;
+  font-weight: 400;
+  font-size: 0.8em;
 }

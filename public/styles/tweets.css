@@ -1,7 +1,7 @@
 article.tweet {
   display: flex;
   flex-direction: column;
-  border: #50504B 0.2em solid;
+  border: 0.2em solid #50504B;
   padding: 0.4em;
   margin: 1em 0.5em;
 }
@@ -36,7 +36,7 @@ article.tweet header div.id {
 
 article.tweet div.content {
   padding: 1.2em 0.8em;
-  border-bottom: #50504B 0.2em solid;
+  border-bottom: 0.2em solid #50504B;
 }
 
 article.tweet footer {

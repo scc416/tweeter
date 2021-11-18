@@ -1,7 +1,7 @@
 nav {
   position: fixed;
   background-color: transparent;
-  color: #FFFFFF;
+  color: #ffffff;
   height: 75px;
   width: 100vw;
   padding: 0 1.5em;
@@ -27,7 +27,7 @@ nav #to-new-tweet:hover {
 }
 
 #to-new-tweet i.fas {
-  color: #EF4126;
+  color: #ef4126;
 }
 
 .strong {
