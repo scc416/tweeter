@@ -11,29 +11,23 @@ nav {
   top: 0px;
   left: 0px;
 }
-
 nav span.logo {
   font-family: Bungee;
   font-size: 1.2em;
 }
-
 nav #to-new-tweet {
   font-size: 0.75em;
   text-align: center;
 }
-
-nav #to-new-tweet:hover {
-  cursor: pointer;
-}
-
-#to-new-tweet i.fas {
+nav #to-new-tweet i.fas {
   color: #ef4126;
 }
-
-.strong {
+nav #to-new-tweet .strong {
   font-weight: 600;
 }
-
-.light {
+nav #to-new-tweet .light {
   font-weight: 100;
+}
+nav #to-new-tweet:hover {
+  cursor: pointer;
 }

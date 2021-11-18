@@ -12,30 +12,30 @@ nav {
   justify-content: space-between;
   top: 0px;
   left: 0px;
-}
 
-nav span.logo {
-  font-family: variables.$title-font;
-  font-size: 1.2em;
-}
+  span.logo {
+    font-family: variables.$title-font;
+    font-size: 1.2em;
+  }
 
-nav #to-new-tweet {
-  font-size: 0.75em;
-  text-align: center;
-}
+  #to-new-tweet {
+    font-size: 0.75em;
+    text-align: center;
 
-nav #to-new-tweet:hover {
-  cursor: pointer;
-}
+    i.fas {
+      color: variables.$new-tweet-icon-colour;
+    }
 
-#to-new-tweet i.fas {
-  color: variables.$new-tweet-icon-colour;
-}
+    .strong {
+      font-weight: 600;
+    }
 
-.strong {
-  font-weight: 600;
-}
+    .light {
+      font-weight: 100;
+    }
+  }
 
-.light {
-  font-weight: 100;
+  #to-new-tweet:hover {
+    cursor: pointer;
+  }
 }
