@@ -1,5 +1,4 @@
 $(document).ready(() => {
-
   const $form = $("#form");
   const $tweetText = $("#tweet-text");
   const $error = $("#error");
@@ -17,16 +16,22 @@ $(document).ready(() => {
     $count.toggleClass("red-text", tooManyChar);
   });
 
+  // function that return promise to slide up and empty the error message
+  const clearErrorMsg = () => {
+    return new Promise((resolve, reject) => {
+      $error.slideUp(() => {
+        $error.text("");
+        resolve();
+      });
+    });
+  };
+
   // helper function to display the error message with an icon
   const displayErrorMsg = (errorMsg) => {
-
-    if (!errorMsg) return $error.slideUp();
-
-    const errorMsgWithIcon = (`
+    const errorMsgWithIcon = `
       <i class="fas fa-exclamation-circle"></i>
       ${errorMsg}
-    `);
-
+      `;
     $error.html(errorMsgWithIcon).slideDown("slow");
   };
 
@@ -34,44 +39,46 @@ $(document).ready(() => {
   $form.on("submit", (event) => {
     event.preventDefault();
 
-    //hide the error message first, no matter if there is any errors
-    displayErrorMsg(null);
+    // hide the error message first, no matter if there is any errors
+    // it is a promise, so that the new error message is not displayed until the previous error (if there is any) is slided up and clear
+    clearErrorMsg()
+      .then(() => {
+      const val = $tweetText.val();
 
-    const val = $tweetText.val();
+      // character count of the value in the text area
+      const numOfChar = val.length;
 
-    // character count of the value in the text area
-    const numOfChar = val.length;
+      const emptyTweet = numOfChar === 0;
+      
+      if (emptyTweet) {
+        const errorMsg = "You cannot submit empty tweet.";
+        displayErrorMsg(errorMsg);
+      } 
+      
+      const tweetToLong = numOfChar > 140;
+      if (tweetToLong) {
+        const errorMsg = "You cannot submit tweet of more than 140 characters.";
+        return displayErrorMsg(errorMsg);
+      }
 
-    const emptyTweet = numOfChar === 0;
-    if (emptyTweet) {
-      const errorMsg = "You cannot submit empty tweet.";
-      return displayErrorMsg(errorMsg);
-    }
+        // convert the input into query string for the server
+        // server is configured to receive form data formatted as a query string
+        const data = $form.serialize();
+        const url = "/tweets";
 
-    const tweetToLong = numOfChar > 140;
-    if (tweetToLong) {
-      const errorMsg = "You cannot submit tweet of more than 140 characters.";
-      return displayErrorMsg(errorMsg);
-    }
+        // use jQuery library to submit a POST request
+        jQuery.post(url, data).done(() => {
+          // load the tweets when the new tweet is submitted
+          loadTweets();
+        });
 
-    // convert the input into query string for the server
-    // server is configured to receive form data formatted as a query string
-    const data = $form.serialize();
-    const url = "/tweets";
+        // reset the text area
+        $tweetText.val("");
 
-    // use jQuery library to submit a POST request
-    jQuery.post(url, data)
-    .done(() => {
-      // load the tweets when the new tweet is submitted
-      loadTweets();
+        // reset the count (and class)
+        $count.text("140");
+        $count.toggleClass("red-text", false);
     });
-
-    // reset the text area
-    $tweetText.val("");
-
-    // reset the count (and class)
-    $count.text("140");
-    $count.toggleClass("red-text", false);
   });
 
   // helper function to prevent XSS
@@ -128,8 +135,7 @@ $(document).ready(() => {
 
   // get all the tweet information from the database and use the result to load the tweets
   const loadTweets = () => {
-    $.ajax("/tweets", { method: 'GET' })
-    .then((tweets) => {
+    $.ajax("/tweets", { method: "GET" }).then((tweets) => {
       renderTweets(tweets);
     });
   };
