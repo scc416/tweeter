@@ -8,9 +8,9 @@ form {
   padding: 1em;
 }
 form div {
-  font-family: Bungee;
   display: flex;
   justify-content: space-between;
+  font-family: Bungee;
   font-size: 0.9em;
   padding-top: 0.5em;
 }

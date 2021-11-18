@@ -3,13 +3,14 @@
 
 nav {
   @include mixins.center-align;
+  @include mixins.equally-spread;
+
   position: fixed;
   background-color: variables.$nav-colour;
   color: variables.$inverted-text-colour;
   height: 75px;
   width: 100vw;
   padding: 0 1.5em;
-  justify-content: space-between;
   top: 0px;
   left: 0px;
 

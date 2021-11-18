@@ -2,3 +2,8 @@
   display: flex;
   align-items: center;
 }
+
+@mixin equally-spread {
+  display: flex;
+  justify-content: space-between;
+}

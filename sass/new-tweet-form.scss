@@ -1,3 +1,4 @@
+@use "mixins";
 @use "variables";
 
 #new-tweet {
@@ -10,9 +11,9 @@ form {
   padding: 1em;
 
   div {
+    @include mixins.equally-spread;
+
     font-family: variables.$title-font;
-    display: flex;
-    justify-content: space-between;
     font-size: 0.9em;
     padding-top: 0.5em;
   }
