@@ -7,7 +7,6 @@ $(document).ready(() => {
   // helper function to slide down the form and focus on text area
   const showForm = () => {
     $newTweet.slideDown(600, () => {
-      
       // after the form is display, focus on the text area of the form
       $tweetText.focus();
     });

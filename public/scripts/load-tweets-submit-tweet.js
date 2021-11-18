@@ -41,44 +41,43 @@ $(document).ready(() => {
 
     // hide the error message first, no matter if there is any errors
     // it is a promise, so that the new error message is not displayed until the previous error (if there is any) is slided up and clear
-    clearErrorMsg()
-      .then(() => {
-        const val = $tweetText.val();
+    clearErrorMsg().then(() => {
+      const val = $tweetText.val();
 
-        // character count of the value in the text area
-        const numOfChar = val.length;
+      // character count of the value in the text area
+      const numOfChar = val.length;
 
-        const emptyTweet = numOfChar === 0;
-        
-        if (emptyTweet) {
-          const errorMsg = "You cannot submit empty tweet.";
-          return displayErrorMsg(errorMsg);
-        }
-        
-        const tweetToLong = numOfChar > 140;
-        if (tweetToLong) {
-          const errorMsg = "You cannot submit tweet of more than 140 characters.";
-          return displayErrorMsg(errorMsg);
-        }
+      const emptyTweet = numOfChar === 0;
 
-        // convert the input into query string for the server
-        // server is configured to receive form data formatted as a query string
-        const data = $form.serialize();
-        const url = "/tweets";
+      if (emptyTweet) {
+        const errorMsg = "You cannot submit empty tweet.";
+        return displayErrorMsg(errorMsg);
+      }
 
-        // use jQuery library to submit a POST request
-        jQuery.post(url, data).done(() => {
-          // load the tweets when the new tweet is submitted
-          loadTweets();
-        });
+      const tweetToLong = numOfChar > 140;
+      if (tweetToLong) {
+        const errorMsg = "You cannot submit tweet of more than 140 characters.";
+        return displayErrorMsg(errorMsg);
+      }
 
-        // reset the text area
-        $tweetText.val("");
+      // convert the input into query string for the server
+      // server is configured to receive form data formatted as a query string
+      const data = $form.serialize();
+      const url = "/tweets";
 
-        // reset the count (and class)
-        $count.text("140");
-        $count.toggleClass("red-text", false);
+      // use jQuery library to submit a POST request
+      jQuery.post(url, data).done(() => {
+        // load the tweets when the new tweet is submitted
+        loadTweets();
       });
+
+      // reset the text area
+      $tweetText.val("");
+
+      // reset the count (and class)
+      $count.text("140");
+      $count.toggleClass("red-text", false);
+    });
   });
 
   // helper function to prevent XSS
