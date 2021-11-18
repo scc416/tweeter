@@ -8,39 +8,39 @@ form {
   display: flex;
   flex-direction: column;
   padding: 1em;
-}
 
-form div {
-  font-family: variables.$title-font;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9em;
-  padding-top: 0.5em;
-}
+  div {
+    font-family: variables.$title-font;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+    padding-top: 0.5em;
+  }
 
-form button {
-  background-color: variables.$submit-button-colour;
-  color: variables.$inverted-text-colour;
-  border: none;
-  padding: 0.1em 0.5em;
-}
+  button {
+    background-color: variables.$submit-button-colour;
+    color: variables.$inverted-text-colour;
+    border: none;
+    padding: 0.1em 0.5em;
+  }
 
-textarea {
-  border: none;
-  background-color: variables.$textarea-colour;
-  border-bottom: 0.2em solid variables.$border-colour;
-  margin-bottom: 0.6em;
-  outline: none;
-  resize: none;
-  font-size: 0.9em;
-}
+  textarea {
+    border: none;
+    background-color: variables.$textarea-colour;
+    border-bottom: 0.2em solid variables.$border-colour;
+    margin-bottom: 0.6em;
+    outline: none;
+    resize: none;
+    font-size: 0.9em;
+  }
 
-.red-text {
-  color: variables.$error-text-colour;
-}
+  .red-text {
+    color: variables.$error-text-colour;
+  }
 
-#error {
-  color: variables.$error-text-colour;
-  font-weight: 400;
-  font-size: 0.8em;
+  #error {
+    color: variables.$error-text-colour;
+    font-weight: 400;
+    font-size: 0.8em;
+  }
 }
