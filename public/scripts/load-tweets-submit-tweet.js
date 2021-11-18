@@ -127,6 +127,7 @@ $(document).ready(() => {
   // helper function to loop an array of tweet information to make element
   // then add the element right after the start tag of the container
   const renderTweets = (tweets) => {
+    $tweetContainer.html("");
     for (const tweetInfo of tweets) {
       const $tweet = createTweetElement(tweetInfo);
       $tweetContainer.prepend($tweet);
