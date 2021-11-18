@@ -43,6 +43,15 @@ View the functionalities (with animated GIF) in [Features](#features) section.
 &nbsp; 
 
 ## Features
+
+### Responsive Design
+![responsive.gif](./docs/responsive.gif)
+Different on desktop screen sizes (for window width above 1024px)
+Breakpoint: 1024px
+
+&nbsp; 
+
+
 ![buttons.gif](./docs/buttons.gif)
 
 &nbsp; 
@@ -59,9 +68,7 @@ View the functionalities (with animated GIF) in [Features](#features) section.
 
 &nbsp; 
 
-![responsive.gif](./docs/responsive.gif)
 
-&nbsp; 
 
 ![write-tweet.gif](./docs/write-tweet.gif)
 
@@ -151,7 +158,7 @@ View the functionalities (with animated GIF) in [Features](#features) section.
  ┃ ┗ 📜tweets.scss
 
  &nbsp; 
- 
+
 ### 📂server
  ┣ 📜.gitignore
  ┣ 📜README.md
