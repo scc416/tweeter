@@ -33,6 +33,14 @@ main {
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #43579c;
+  }
+
+  .page {
+    margin-top: 150px;
+  }
+
   .page-header {
     width: 30%;
     float: left;
@@ -45,13 +53,5 @@ main {
     width: 52%;
     margin: 0 3%;
     float: right;
-  }
-
-  nav {
-    background-color: #43579c;
-  }
-
-  .page {
-    margin-top: 150px;
   }
 }
