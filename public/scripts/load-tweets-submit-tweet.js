@@ -16,13 +16,15 @@ $(document).ready(() => {
     $count.toggleClass("red-text", tooManyChar);
   });
 
-  // helper function to display the error message with an icon
+  // helper function to display (slide down) the error message with an icon
   const displayErrorMsg = (errorMsg) => {
     const errorMsgWithIcon = `
       <i class="fas fa-exclamation-circle"></i>
       ${errorMsg}
       `;
-    $error.html(errorMsgWithIcon).slideDown("slow");
+    $error
+      .html(errorMsgWithIcon)
+      .slideDown("slow");
   };
 
   // show whether to display error msg or submit the tweet when submit button is clicked

@@ -17,7 +17,7 @@ This project is Built on [the tweeter template](https://github.com/lighthouse-la
 
 ## Final Product
 
-![write-tweet.gif](./docs/write-tweet.gif)
+![write-tweet.gif](./docs/write-tweet.gif)  
 View the functionalities (with animated GIF) in [Features](#features) section.
 
 &nbsp;
