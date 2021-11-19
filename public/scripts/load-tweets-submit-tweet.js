@@ -16,16 +16,6 @@ $(document).ready(() => {
     $count.toggleClass("red-text", tooManyChar);
   });
 
-  // function that return promise to slide up and empty the error message
-  const clearErrorMsg = () => {
-    return new Promise((resolve) => {
-      $error.slideUp(() => {
-        $error.text("");
-        resolve();
-      });
-    });
-  };
-
   // helper function to display the error message with an icon
   const displayErrorMsg = (errorMsg) => {
     const errorMsgWithIcon = `
@@ -39,9 +29,8 @@ $(document).ready(() => {
   $form.on("submit", (event) => {
     event.preventDefault();
 
-    // hide the error message first, no matter if there is any errors
-    // it is a promise, so that the new error message is not displayed until the previous error (if there is any) is slided up and clear
-    clearErrorMsg().then(() => {
+    // everything else happens after the error message is slide up
+    $error.slideUp(() => {
       const val = $tweetText.val();
 
       // character count of the value in the text area
