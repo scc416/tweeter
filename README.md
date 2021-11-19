@@ -1,6 +1,7 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone.  
+This project is Built on [the tweeter template](https://github.com/lighthouse-labs/tweeter) by [@lighthouse-labs](https://github.com/lighthouse-labs).
 
 &nbsp; 
 
@@ -46,12 +47,16 @@ View the functionalities (with animated GIF) in [Features](#features) section.
 
 ### Responsive Design
 ![responsive.gif](./docs/responsive.gif)
-Different on desktop screen sizes (for window width above 1024px)
-Breakpoint: 1024px
+The web page has two layouts on different screen sizes (Breakpoint: 1024px)
 
 &nbsp; 
 
+### Submit new tweet with form
+![write-tweet.gif](./docs/write-tweet.gif)
 
+&nbsp; 
+
+### Toggle form & Go to top of the page
 ![buttons.gif](./docs/buttons.gif)
 
 &nbsp; 
@@ -68,18 +73,10 @@ Breakpoint: 1024px
 
 &nbsp; 
 
-
-
-![write-tweet.gif](./docs/write-tweet.gif)
-
-&nbsp; 
-
 ## File Structure
 
 <pre>
 📦tweeter
- ┣ 📂.git
- ┣ 📂.github
  ┣ 📂docs
  ┣ 📂public
  ┃ ┣ 📂images
@@ -114,53 +111,61 @@ Breakpoint: 1024px
  ┗ 📜package.json
 </pre>
 
-### 📂.git
-
-&nbsp; 
-
-### 📂.github
-
-&nbsp; 
 
 ### 📂docs
-
+Store image and animated GIF that are displayed in this README document. These files are not included on the diagram above.
 &nbsp; 
 
 
 ### 📂public
- ┃ ┣ 📂images
- ┃ ┃ ┗ 📜profile-hex.png
- ┃ ┣ 📂scripts
+
+#### 📂images
+📜profile-hex.png
+####  📂scripts
  ┃ ┃ ┣ 📜buttons.js
  ┃ ┃ ┗ 📜load-tweets-submit-tweet.js
- ┃ ┣ 📂styles
+####  📂styles
  ┃ ┃ ┣ 📜header.css
  ┃ ┃ ┣ 📜layout.css
  ┃ ┃ ┣ 📜nav.css
  ┃ ┃ ┣ 📜new-tweet-form.css
  ┃ ┃ ┣ 📜scroll-to-top.css
  ┃ ┃ ┗ 📜tweets.css
- ┃ ┣ 📂vendor
+####  📂vendor
  ┃ ┃ ┣ 📜jquery-2.2.3.min.js
  ┃ ┃ ┗ 📜normalize-4.1.1.css
- ┃ ┗ 📜index.html
+####  📜index.html
 
  &nbsp; 
 
  ### 📂sass
- ┃ ┣ 📜_mixins.scss
- ┃ ┣ 📜_variables.scss
- ┃ ┣ 📜header.scss
- ┃ ┣ 📜layout.scss
- ┃ ┣ 📜nav.scss
- ┃ ┣ 📜new-tweet-form.scss
- ┃ ┣ 📜scroll-to-top.scss
- ┃ ┗ 📜tweets.scss
+ #### 📜_mixins.scss
+ #### 📜_variables.scss
+ #### 📜header.scss
+ #### 📜layout.scss
+ #### 📜nav.scss
+ #### 📜new-tweet-form.scss
+ #### 📜scroll-to-top.scss
+ #### 📜tweets.scss
 
  &nbsp; 
 
 ### 📂server
- ┣ 📜.gitignore
- ┣ 📜README.md
- ┣ 📜package-lock.json
- ┗ 📜package.json
+
+ &nbsp; 
+
+
+### 📜.gitignore
+This file is to ignore the `node_modules` folder and `.DS_store`.
+
+ &nbsp; 
+
+### 📜README.md
+
+ &nbsp; 
+
+### 📜package-lock.json
+
+  &nbsp; 
+
+### 📜package.json
