@@ -1,7 +1,7 @@
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.  
-This project is Built on [the tweeter template](https://github.com/lighthouse-labs/tweeter) by [@lighthouse-labs](https://github.com/lighthouse-labs).
+This project is Built on [the tweeter template](https://github.com/lighthouse-labs/tweeter) by [lighthouse-labs](https://github.com/lighthouse-labs).
 
 &nbsp;
 
