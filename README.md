@@ -48,7 +48,7 @@ View the functionalities (with animated GIF) in [Features](#features) section.
 
 ### 1. Submit new tweet with form
 
-![write-tweet.gif](./docs/write-tweet.gif)
+![write-tweet.gif](./docs/write-tweet.gif)  
 When a user submits a valid tweet, the new tweet is displayed.
 
 &nbsp;
@@ -78,14 +78,14 @@ When the user clicks this button, they are brought back up to the top of the pag
 
 ### 3. Display error message
 
-![error_message.gif](./docs/error_message.gif)
+![error_message.gif](./docs/error_message.gif)  
 When a user submits an invalid tweet (empty or contains more than 140 characters), an error message is displayed.
 
 &nbsp;
 
 ### 4. Responsive Design
 
-![responsive.gif](./docs/responsive.gif)
+![responsive.gif](./docs/responsive.gif)  
 The web page has two layouts on different screen sizes (Breakpoint: 1024px).
 
 &nbsp;
