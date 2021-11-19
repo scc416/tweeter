@@ -68,7 +68,7 @@ When a user clicks this button:
 
 **Back to top botton in the lower right hand corner**
 
-When a user scrolls, a "back to top" button appears(Compose button in the navigation bar will be hidden)  
+When a user scrolls, a red and circular "back to top" button appears (and compose button in the navigation bar will be hidden)  
 When the user clicks this button, they are brought back up to the top of the page, and:
 
 - if the Compose Tweet box is currently hidden, then it is shown, and the textarea inside it is auto-focused
@@ -127,7 +127,7 @@ The web page has two layouts on different screen sizes (Breakpoint: 1024px).
 
 ### 📂docs
 
-Store image and animated GIF that are displayed in this README document. These files are not included in the diagram above.
+Store animated GIF that are displayed in this README document. These files are not included in the diagram above.
 
 ### 📂public
 
@@ -137,7 +137,7 @@ Contain `profile-hex.png` for the profile picture in page header.
 
 #### 📂scripts
 
-Contain `buttons.js` and `load-tweets-submit-tweet.js`, which responsible for listening on events and then manipulate the html document.
+Contain `buttons.js` and `load-tweets-submit-tweet.js`, which are responsible for listening on events and then manipulate the html document.
 
 #### 📂styles
 
@@ -149,7 +149,7 @@ The `html` file that is rendered by the server.
 
 ### 📂sass
 
-Contains all the sass file. sass watches the files in this folder when command `npm run sass-watch` is used in terminal.
+Contains all the `Sass` file. `Sass` watches the files in this folder when command `npm run sass-watch` is used in terminal.
 
 #### 📜_mixins.scss
 
@@ -161,7 +161,7 @@ Contains all the variables for other `Scss` files.
 
 #### 📜Other Scss files
 
-`header.scss`, `layout.scss`, `nav.scss`, `new-tweet-form.scss`, `scroll-to-top.scss`, `tweets.scss` manage the style of the corresponding section
+`header.scss`, `layout.scss`, `nav.scss`, `new-tweet-form.scss`, `scroll-to-top.scss`, `tweets.scss` manage the style of the corresponding section.
 
 ### 📂server
 
@@ -170,7 +170,7 @@ Contain the `Javascript` and `JSON` file for the server and database.
 
 ### 📜.gitignore
 
-This file is to ignore the `node_modules` folder and `.DS_store`.
+This file is to ignore the `node_modules` folder and `.DS_store` files.
 
 ### 📜README.md
 
@@ -180,6 +180,6 @@ This document that you are reading.
 
 This file contains:
 
-- the list of dependencies (node libraries that the executable code (and development code) needs)
-- dev-dependencies: node libraries only needed by development tools</li>
+- the list of dependencies (node libraries that the executable code needs)
+- dev-dependencies: node libraries only needed by development tools
 - scripts: Define the in-project shortcut commands, therefore using `npm start`, `npm run local`, `npm run sass-watch` is equivalent to calling script value
