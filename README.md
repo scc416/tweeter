@@ -68,7 +68,7 @@ When a user clicks this button:
 
 **Back to top botton in the lower right hand corner**
 
-When a user scrolls, a "back to top" button appears
+When a user scrolls, a "back to top" button appears(Compose button in the navigation bar will be hidden)  
 When the user clicks this button, they are brought back up to the top of the page, and:
 
 - if the Compose Tweet box is currently hidden, then it is shown, and the textarea inside it is auto-focused
