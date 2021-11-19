@@ -129,6 +129,6 @@ $(document).ready(() => {
     });
   };
 
-  // load tweet when the page is first loaded
+  // load tweets when the page is first loaded
   loadTweets();
 });
