@@ -22,6 +22,19 @@ nav #to-new-tweet {
 }
 nav #to-new-tweet i.fas {
   color: #ef4126;
+  position: relative;
+  animation: move 2s infinite;
+}
+@keyframes move {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: 8px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 nav #to-new-tweet .strong {
   font-weight: 600;
