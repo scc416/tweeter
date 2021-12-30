@@ -12,6 +12,7 @@ This project is Built on the [tweeter template](https://github.com/lighthouse-la
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [File Structure](#file-structure)
+- [Credit](#credit)
 
 &nbsp;
 
@@ -183,3 +184,7 @@ This file contains:
 - the list of dependencies (node libraries that the executable code needs)
 - dev-dependencies: node libraries only needed by development tools
 - scripts: Define the in-project shortcut commands, therefore using `npm start`, `npm run local`, `npm run sass-watch` is equivalent to calling script value
+
+## Credit
+
+- [Favicons](https://www.flaticon.com/premium-icon/twitter_3025545) made by [Freepik](https://www.freepik.com) from [www.flaticon.com](https://www.flaticon.com/)
