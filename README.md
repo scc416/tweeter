@@ -5,6 +5,7 @@ This project is Built on the [tweeter template](https://github.com/lighthouse-la
 
 ## Table of Content
 
+- [Live Demo](#live-demo)
 - [Final Product](#final-product)
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
