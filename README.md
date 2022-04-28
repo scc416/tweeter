@@ -3,8 +3,6 @@
 Tweeter is a simple, single-page Twitter clone.  
 This project is Built on the [tweeter template](https://github.com/lighthouse-labs/tweeter) by [lighthouse-labs](https://github.com/lighthouse-labs).
 
-&nbsp;
-
 ## Table of Content
 
 - [Final Product](#final-product)
@@ -14,7 +12,13 @@ This project is Built on the [tweeter template](https://github.com/lighthouse-la
 - [File Structure](#file-structure)
 - [Credit](#credit)
 
-&nbsp;
+## Live Demo
+
+This project is deployed to [Heroku](https://heroku.com/):
+
+https://that-tweeter.herokuapp.com
+
+It might take some time to load up the server.
 
 ## Final Product
 
