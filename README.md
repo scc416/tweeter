@@ -5,21 +5,12 @@ This project is Built on the [tweeter template](https://github.com/lighthouse-la
 
 ## Table of Content
 
-- [Live Demo](#live-demo)
 - [Final Product](#final-product)
 - [Dependencies](#dependencies)
 - [Getting Started](#getting-started)
 - [Features](#features)
 - [File Structure](#file-structure)
 - [Credit](#credit)
-
-## Live Demo
-
-This project is deployed to [Heroku](https://heroku.com/):
-
-https://that-tweeter.herokuapp.com
-
-It might take some time to load up the server.
 
 ## Final Product
 
